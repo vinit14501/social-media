@@ -1,13 +1,13 @@
-import { Modal, useMantineTheme } from '@mantine/core';
-import PostShare from '../PostShare/PostShare';
+import React from "react";
+import { Modal, useMantineTheme } from "@mantine/core";
+import FollowersCard from "../FollowersCard/FollowersCard";
 
-function ShareModal({ modalOpened, setModalOpened }) {
+const FollowersModal = ({ modalOpened, setModalOpened }) => {
   const theme = useMantineTheme();
-
   return (
     <Modal
       overlayColor={
-        theme.colorScheme === 'dark'
+        theme.colorScheme === "dark"
           ? theme.colors.dark[9]
           : theme.colors.gray[2]
       }
@@ -17,9 +17,10 @@ function ShareModal({ modalOpened, setModalOpened }) {
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
-      <PostShare />
+
+    <FollowersCard location='modal'/>
     </Modal>
   );
-}
+};
 
-export default ShareModal;
+export default FollowersModal;

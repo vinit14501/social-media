@@ -1,4 +1,5 @@
-.FollowersCard {
+
+.FollowersCard{
     width: 100%;
     border-radius: 0.7rem;
     gap: 1rem;
@@ -7,45 +8,44 @@
     font-size: 13px;
     max-height: 10rem;
 }
-
-.follower {
+.follower{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.follower>div {
+.follower>div{
     display: flex;
     gap: 10px;
 }
 
 
-.followerImage {
+.followerImage{
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
 }
 
-.name {
+.name{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.name>span:nth-of-type(1) {
+.name>span:nth-of-type(1){
     font-weight: bold;
 }
 
 
 
-.fc-button {
+.fc-button{
     height: 2rem;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.UnfollowButton {
+.UnfollowButton{
     color: var(--orange);
     border: 2px solid var(--orange);
     cursor: pointer;
@@ -53,7 +53,7 @@
 }
 
 
-.FollowersCard>span {
+.FollowersCard>span{
     font-weight: bold;
     color: orange;
     align-self: center;

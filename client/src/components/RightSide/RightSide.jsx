@@ -1,44 +1,25 @@
-import React, { useState } from 'react';
-import './RightSide.css';
-import Home from '../../img/home.png';
-import Noti from '../../img/noti.png';
-import Comment from '../../img/comment.png';
-import { UilSetting } from '@iconscout/react-unicons';
-import TrendCard from '../TrendCard/TrendCard';
-import ShareModal from '../ShareModel/ShareModel';
+import React, { useState } from "react";
+import "./RightSide.css";
 
+import TrendCard from "../TrendCard/TrendCard";
+import ShareModal from "../ShareModal/ShareModal";
+import NavIcons from "../NavIcons/NavIcons";
 const RightSide = () => {
   const [modalOpened, setModalOpened] = useState(false);
+
   return (
     <div className="RightSide">
-      <div className="navIcons">
-        <img
-          src={Home}
-          alt=""
-        />
-        <UilSetting />
-        <img
-          src={Noti}
-          alt=""
-        />
-        <img
-          src={Comment}
-          alt=""
-        />
-      </div>
+      {/* Side Navbar */}
 
+      <NavIcons />
+      {/* TrendCard */}
       <TrendCard />
 
-      <button
-        className="button r-button"
-        onClick={() => setModalOpened(true)}
-      >
+      {/* Share buttong */}
+      <button className="button r-button" onClick={() => setModalOpened(true)}>
         Share
       </button>
-      <ShareModal
-        modalOpened={modalOpened}
-        setModalOpened={setModalOpened}
-      />
+      <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
     </div>
   );
 };
